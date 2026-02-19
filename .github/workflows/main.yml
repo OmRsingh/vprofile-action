@@ -12,10 +12,10 @@ jobs:
         - name: Code Checkout
           uses: actions/checkout@v4
 
-        - name: Maven Test
+        - name: Maven test
           uses: mvn test
 
-        - name: checkstyle
+        - name: Checkstyle
           uses: mvn checkstyle:checkstyle
 
         - name: Setup Java 11
