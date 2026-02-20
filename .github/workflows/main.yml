@@ -50,7 +50,7 @@ jobs:
             SONAR_HOST_URL: ${{ secrets.SONAR_URL }}
 
     BUILD_AND_PUBLISH:
-      needs: Testing    #specify stage which needs to be executed first
+      needs: Testing    #specify stage which needs to be executed first.
       runs-on: Ubuntu-latest
       steps:
        - name: Code Checkout
