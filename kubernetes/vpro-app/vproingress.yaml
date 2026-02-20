@@ -7,7 +7,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: vprofile.thehkh.com
+  - host: superhero.animeindia.net
     http:
       paths:
       - path: /
