@@ -87,6 +87,9 @@ jobs:
         - name: Update to kube config your aws profile.         #Add your profile to eks to use your aws acc for manipulation of eks.
           run: aws eks update-kubeconfig --region ${{ env.AWS_REGION }} --name ${{ env.EKS_CLUSTER}}
 
+        - name: Print kube config
+          run: cat ~/.kube/config
+
         - name: Login to ECR
           run: |
             ECR_PASS=$(aws ecr get-login-password --region ${{ env.AWS_REGION}})
