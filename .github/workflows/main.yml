@@ -89,7 +89,7 @@ jobs:
 
         - name: Login to ECR
           run: |
-            ECR_PASS=$(aws ecr get-login-password) --region ${{ env.AWS_REGION}})
+            ECR_PASS=$(aws ecr get-login-password --region ${{ env.AWS_REGION}})
             kubectl create secret docker-registry regcreds \
             --docker-server=${{ secrets.REGISTRY }} \
             --docker-username=AWS \
